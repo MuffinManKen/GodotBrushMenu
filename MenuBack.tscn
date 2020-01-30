@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://gfx/background.webp" type="Texture" id=1]
+[ext_resource path="res://gfx/Flourish.webp" type="Texture" id=2]
+[ext_resource path="res://gfx/Logo.webp" type="Texture" id=3]
+[ext_resource path="res://nodes/MenuButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://MenuBack.gd" type="Script" id=5]
+
+[node name="MenuBack" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="."]
+margin_left = 624.015
+margin_top = 229.011
+margin_right = 1297.02
+margin_bottom = 624.011
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flourish" type="TextureRect" parent="."]
+margin_left = 499.52
+margin_top = 359.654
+margin_right = 608.52
+margin_bottom = 468.654
+texture = ExtResource( 2 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flourish2" type="TextureRect" parent="."]
+margin_left = 1309.51
+margin_top = 368.876
+margin_right = 1418.51
+margin_bottom = 477.876
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameButton" parent="." instance=ExtResource( 4 )]
+margin_left = 748.8
+margin_top = 671.202
+margin_right = 1171.2
+margin_bottom = 763.602
+rect_scale = Vector2( 1, 1 )
+rect_pivot_offset = Vector2( 211.2, 46.2 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../ContinueButton")
+focus_next = NodePath("../ContinueButton")
+focus_previous = NodePath(".")
+text = "NEW GAME"
+
+[node name="ContinueButton" parent="." instance=ExtResource( 4 )]
+margin_left = 759.0
+margin_top = 779.251
+margin_right = 1161.0
+margin_bottom = 871.651
+rect_pivot_offset = Vector2( 201, 46.2 )
+text = "CONTINUE"
+
+[node name="QuitButton" parent="." instance=ExtResource( 4 )]
+margin_left = 868.8
+margin_top = 897.599
+margin_right = 1051.2
+margin_bottom = 989.999
+rect_pivot_offset = Vector2( 91.2, 46.2 )
+text = "QUIT"
